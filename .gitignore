@@ -21,3 +21,6 @@ mini_games/
 *.SC2Replay
 
 \.idea/
+
+# Vim
+.*.sw?
