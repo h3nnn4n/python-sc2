@@ -65,8 +65,10 @@ class Units(list):
 
     @property
     def first(self) -> Unit:
-        assert self.exists
-        return self[0]
+        if self.exists:
+            return self[0]
+
+        return None
 
     def take(self, n: int, require_all: bool=True) -> "Units":
         assert (not require_all) or len(self) >= n
